@@ -1,0 +1,19 @@
+def moveZeroes(nums):
+   
+    n = len(nums)
+    left = [] 
+
+    for i in range(n):
+        if nums[i] != 0:
+            nums[left] = nums[i]
+            left += 1
+
+    # Fill the remaining elements with zeros
+    for i in range(left, n):
+        nums[i] = 0
+
+
+# Test the function
+nums = [0, 1, 0, 3, 12]
+moveZeroes(nums)
+print(nums) 
